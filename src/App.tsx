@@ -1,9 +1,11 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import './App.css';
+import { THEME } from './infrastructure/theme';
 import Home from './pages/Home.page';
 import NotFound from './pages/NotFound.page';
 
 export function App() {
-  // alert('here...');
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -14,8 +16,10 @@ export function App() {
 
 export function WrappedApp() {
   return (
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <ThemeProvider theme={THEME}>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </ThemeProvider>
   );
 }
