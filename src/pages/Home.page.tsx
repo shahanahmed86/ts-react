@@ -1,5 +1,7 @@
+import Typography from '../components/typography.component';
+
 function Home() {
-  return <h1>Hello world</h1>;
+  return <Typography>Hello world</Typography>;
 }
 
 export default Home;

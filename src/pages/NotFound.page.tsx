@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
+import Typography from '../components/typography.component';
 
 function NotFound() {
   return (
     <>
-      <h1>Not Found</h1>
-      <Link to="/">Go Home</Link>
+      <Typography variant="error">Not Found</Typography>
+      <Link to="/">
+        <Typography variant="hint">Go Home</Typography>
+      </Link>
     </>
   );
 }
