@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "^18"
+  },
+  "engineStrict": true,
   "scripts": {
     "prepare": "echo 'installing husky...' && husky install",
     "dev": "vite",
@@ -10,8 +14,8 @@
     "test": "vitest",
     "preview": "vite preview",
     "lint": "eslint --ext .{ts,tsx}",
-    "prettify": "prettier --config .prettierrc '**/*.{html,css,ts,tsx}' --write",
-    "prettify-watch": "onchange '**/*.{html,css,ts,tsx}' -- prettier --config .prettierrc --write {{changed}}"
+    "prettify": "prettier --config .prettierrc '**/*.{html,css,js,json,ts,tsx,prettierrc,eslintrc}' --write",
+    "prettify-watch": "onchange '**/*.{html,css,js,json,ts,tsx,prettierrc,eslintrc}' -- prettier --config .prettierrc --write {{changed}}"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
