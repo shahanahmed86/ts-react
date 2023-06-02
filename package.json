@@ -13,8 +13,9 @@
     "build": "tsc && vite build",
     "test": "vitest",
     "preview": "vite preview",
-    "lint": "eslint --ext .{ts,tsx}",
-    "prettify": "prettier --config .prettierrc '**/*.{html,css,js,json,ts,tsx,prettierrc,eslintrc}' --write",
+    "lint": "eslint",
+    "prettify": "prettier --config .prettierrc '**/*.{html,css,js,json,ts,tsx,prettierrc,eslintrc}'",
+    "prettify:fix": "prettier --config .prettierrc '**/*.{html,css,js,json,ts,tsx,prettierrc,eslintrc}' --write",
     "prettify-watch": "onchange '**/*.{html,css,js,json,ts,tsx,prettierrc,eslintrc}' -- prettier --config .prettierrc --write {{changed}}"
   },
   "lint-staged": {
