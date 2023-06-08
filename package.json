@@ -11,6 +11,8 @@
     "prepare": "echo 'installing husky...' && husky install",
     "dev": "vite",
     "build": "tsc && vite build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist",
     "test": "vitest",
     "preview": "vite preview",
     "lint": "eslint --ext src/**/*.*.{ts,tsx}",
@@ -38,8 +40,10 @@
   },
   "homepage": "https://github.com/shahanahmed86/ts-react#readme",
   "dependencies": {
+    "bootstrap": "^5.3.0",
     "husky": "^8.0.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
     "styled-components": "^5.3.11"
@@ -65,6 +69,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "gh-pages": "^5.0.0",
     "jsdom": "^22.0.0",
     "lint-staged": "^13.2.2",
     "onchange": "^7.1.0",
