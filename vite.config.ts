@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'http://shahanahmed86.github.io/ts-react',
+  base: 'https://shahanahmed86.github.io/ts-react/',
   plugins: [react()],
   test: {
     globals: true,
