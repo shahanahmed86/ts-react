@@ -19,6 +19,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vite.config.ts", "src"],
+  "include": ["vite.config.ts", "src", "commitlint.config.cjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
