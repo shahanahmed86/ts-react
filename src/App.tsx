@@ -7,19 +7,19 @@ import NotFound from './pages/NotFound.page';
 
 export function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <ThemeProvider theme={THEME}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </ThemeProvider>
   );
 }
 
 export function WrappedApp() {
   return (
-    <ThemeProvider theme={THEME}>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </ThemeProvider>
+    <HashRouter>
+      <App />
+    </HashRouter>
   );
 }
