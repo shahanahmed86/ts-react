@@ -1,7 +1,15 @@
-import Typography from '../components/typography.component';
+import StyledButton from '../components/button';
+import Spacer from '../components/spacer';
+import Typography from '../components/typography';
 
 function Home() {
-  return <Typography>Hello world</Typography>;
+  return (
+    <>
+      <Typography variant="caption">Hello world</Typography>
+      <Spacer />
+      <StyledButton />
+    </>
+  );
 }
 
 export default Home;
