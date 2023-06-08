@@ -1,6 +1,6 @@
 import COLORS from './colors.theme';
-import { SIZES, LINE_HEIGHTS, SPACES } from './sizes.theme';
 import { FONT_FACES, FONT_SIZES, FONT_WEIGHTS } from './fonts.theme';
+import { LINE_HEIGHTS, SIZES, SPACES } from './sizes.theme';
 
 export const THEME = {
   colors: COLORS,

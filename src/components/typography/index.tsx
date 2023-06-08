@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { TTheme } from '../infrastructure/theme';
+import styled, { css } from 'styled-components';
+import { TTheme } from '../../infrastructure/theme';
 
-const defaultTextStyles = (theme: TTheme) => `
-  font-family: ${theme.fonts.body};
+const defaultTextStyles = (theme: TTheme) => css`
+  font-family: ${theme.fonts.heading};
   font-weight: ${theme.fontWeights.regular};
   color: ${theme.colors.text.primary};
   flex-wrap: wrap;
@@ -10,35 +10,36 @@ const defaultTextStyles = (theme: TTheme) => `
   margin-bottom: 0px;
 `;
 
-const body = (theme: TTheme) => `
+const body = (theme: TTheme) => css`
   font-size: ${theme.fontSizes.body};
 `;
 
-const hint = (theme: TTheme) => `
+const hint = (theme: TTheme) => css`
   font-size: ${theme.fontSizes.body};
 `;
 
-const error = (theme: TTheme) => `
+const error = (theme: TTheme) => css`
   color: ${theme.colors.text.error};
 `;
 
-const caption = (theme: TTheme) => `
+const caption = (theme: TTheme) => css`
   font-size: ${theme.fontSizes.caption};
   font-weight: ${theme.fontWeights.bold};
 `;
 
-const label = (theme: TTheme) => `
+const label = (theme: TTheme) => css`
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizes.body};
   font-weight: ${theme.fontWeights.medium};
 `;
 
 const variants = { body, label, caption, error, hint };
+type Variant = keyof typeof variants;
 
-type TextProps = { variant?: keyof typeof variants; theme: TTheme };
+type TextProps = { variant?: Variant; theme: TTheme };
 
 const Typography = styled.p`
-  ${({ theme }: { theme: TTheme }) => defaultTextStyles(theme)}
+  ${({ theme }: TextProps) => defaultTextStyles(theme)}
   ${({ variant = 'body', theme }: TextProps) => variants[variant](theme)}
 `;
 
