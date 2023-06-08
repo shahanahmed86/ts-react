@@ -12,9 +12,7 @@ describe('App', () => {
     // ACT
 
     // EXPECT
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'Hello world'
-    );
+    expect(screen.getByText('Hello world')).toBeInTheDocument();
   });
   it('Renders not found', () => {
     // ARRANGE
@@ -27,8 +25,7 @@ describe('App', () => {
     // ACT
 
     // EXPECT
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'Not Found'
-    );
+    expect(screen.getByText('Not Found')).toBeInTheDocument();
+    expect(screen.getByText('Go Home')).toBeInTheDocument();
   });
 });
