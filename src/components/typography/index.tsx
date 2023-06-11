@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { TTheme } from '../../infrastructure/theme';
+import { TTheme } from '../../app/theme/default';
 
 const defaultTextStyles = (theme: TTheme) => css`
   font-family: ${theme.fonts.heading};

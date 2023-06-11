@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { TTheme } from '../../infrastructure/theme';
+import { TTheme } from '../../app/theme/default';
 
 const sizeVariants = {
   small: 1,

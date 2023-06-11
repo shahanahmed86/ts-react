@@ -1,4 +1,4 @@
-const COLORS = {
+export const COLORS = {
   ui: {
     primary: {
       light: '#42a5f5',
@@ -45,4 +45,6 @@ const COLORS = {
   },
 };
 
-export default COLORS;
+export type Mode = 'light' | 'dark';
+
+export const MODE: Mode = 'light';

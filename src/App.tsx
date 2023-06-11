@@ -1,18 +1,20 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
+import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
 import './App.css';
-import { THEME } from './infrastructure/theme';
-import Home from './pages/Home.page';
-import NotFound from './pages/NotFound.page';
+import { persistor, store } from './app/store';
+import Navigator from './infrastructure/navigators';
+import ThemeProvider from './infrastructure/theme';
 
 export function App() {
   return (
-    <ThemeProvider theme={THEME}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </ThemeProvider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider>
+          <Navigator />
+        </ThemeProvider>
+      </PersistGate>
+    </Provider>
   );
 }
 
