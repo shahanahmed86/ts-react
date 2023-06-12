@@ -1,10 +1,11 @@
 {
   "name": "ts-react",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "engines": {
-    "node": "^18"
+    "node": "^18.15.0",
+    "npm": "please-use-yarn-instead",
+    "yarn": "^1.22.19"
   },
   "engineStrict": true,
   "scripts": {
