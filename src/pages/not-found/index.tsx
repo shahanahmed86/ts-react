@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Typography from '../components/typography';
+import Typography from '../../components/typography';
 
 function NotFound() {
   return (

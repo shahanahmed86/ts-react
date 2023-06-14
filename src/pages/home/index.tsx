@@ -1,6 +1,6 @@
-import StyledButton from '../components/button';
-import Spacer from '../components/spacer';
-import Typography from '../components/typography';
+import StyledButton from '../../components/button';
+import Spacer from '../../components/spacer';
+import Typography from '../../components/typography';
 
 function Home() {
   return (
