@@ -14,3 +14,10 @@
   font-family: 'BlakaHollow';
   src: url('./assets/fonts/BlakaHollow-Regular.ttf');
 }
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow-y: hidden;
+}
