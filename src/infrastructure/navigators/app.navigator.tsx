@@ -1,13 +1,18 @@
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from '../../pages/Home.page';
-import NotFound from '../../pages/NotFound.page';
+
+const Spinner = lazy(() => import('../../components/spinner'));
+const Home = lazy(() => import('../../pages/home'));
+const NotFound = lazy(() => import('../../pages/not-found'));
 
 function AppNavigator() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <Suspense fallback={<Spinner />}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 }
 
